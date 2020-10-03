@@ -19,6 +19,9 @@ inputs:
   TEMPLATE_S3_URI:
     description: 'template s3 uri'
     required: true
+  PARAMETERS:
+    description: 'Cloudformation Paramaters'
+    required: false
 runs: 
   using: 'node12'
   main: 'dist/index.js'

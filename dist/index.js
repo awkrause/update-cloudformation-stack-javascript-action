@@ -15,6 +15,7 @@ try {
     const region = core.getInput('REGION');
     const stack = core.getInput('STACK');
     const templateS3Uri = core.getInput('TEMPLATE_S3_URI');
+    const parameters = core.getInput('PARAMETERS')
 
     const cf = new cloudFomration({
         accessKeyId: accessKey,
@@ -29,7 +30,8 @@ try {
         'CAPABILITY_AUTO_EXPAND'
       ],
       TemplateURL: templateS3Uri,
-      UsePreviousTemplate: false
+      UsePreviousTemplate: false,
+      PARAMETERS: parameters
     };
     cf.updateStack(params, function(err, data) {
       if (err){
