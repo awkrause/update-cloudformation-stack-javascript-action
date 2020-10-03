@@ -13,7 +13,7 @@ inputs:
   STACK:
     description: 'AWS Stack to update'
     required: true
-  TEMPLATe_S3_URI:
+  TEMPLATE_S3_URI:
     description: 'template s3 uri'
     required: true
 runs: 

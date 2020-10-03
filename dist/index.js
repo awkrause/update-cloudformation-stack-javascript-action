@@ -13,7 +13,7 @@ try {
     const accessKey = core.getInput('ACCESS_KEY');
     const secereteKey = core.getInput('SECRET_KEY');
     const stack = core.getInput('STACK');
-    const templateS3Uri = core.getInput('TEMPLATe_S3_URI');
+    const templateS3Uri = core.getInput('TEMPLATE_S3_URI');
 
     const cf = new cloudFomration({
         accessKeyId: accessKey,
@@ -22,9 +22,9 @@ try {
     var params = {
       StackName: stack,
       Capabilities: [
-        CAPABILITY_IAM,
-        CAPABILITY_NAMED_IAM,
-        CAPABILITY_AUTO_EXPAND
+        'CAPABILITY_IAM',
+        'CAPABILITY_NAMED_IAM',
+        'CAPABILITY_AUTO_EXPAND'
       ],
       TemplateURL: templateS3Uri,
       UsePreviousTemplate: false
