@@ -1,1 +1,1 @@
-# update-cloudfront-stack-javascript-action
+# update-cloudformation-stack-javascript-action
