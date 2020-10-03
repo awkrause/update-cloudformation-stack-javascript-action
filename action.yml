@@ -1,0 +1,21 @@
+name: 'Update Cloudformation Stack'
+description: 'Action to trigger a cloudformation stack update'
+branding:
+  icon: 'upload-cloud'
+  color: 'orange'
+inputs:
+  ACCESS_KEY:
+    description: 'AWS Access Key Id'
+    required: true
+  SECRET_KEY:
+    description: 'AWS Seceret Access Key'
+    required: true
+  STACK:
+    description: 'AWS Stack to update'
+    required: true
+  TEMPLATe_S3_URI:
+    description: 'template s3 uri'
+    required: true
+runs: 
+  using: 'node12'
+  main: 'dist/index.js'
