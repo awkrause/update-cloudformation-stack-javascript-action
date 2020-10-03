@@ -10,6 +10,9 @@ inputs:
   SECRET_KEY:
     description: 'AWS Seceret Access Key'
     required: true
+  REGION:
+    description: 'AWS region'
+    required: true
   STACK:
     description: 'AWS Stack to update'
     required: true

@@ -12,12 +12,14 @@ try {
 
     const accessKey = core.getInput('ACCESS_KEY');
     const secereteKey = core.getInput('SECRET_KEY');
+    const region = core.getInput('REGION');
     const stack = core.getInput('STACK');
     const templateS3Uri = core.getInput('TEMPLATE_S3_URI');
 
     const cf = new cloudFomration({
         accessKeyId: accessKey,
-        secretAccessKey: secereteKey
+        secretAccessKey: secereteKey,
+        region: region
     });
     var params = {
       StackName: stack,
