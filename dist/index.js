@@ -31,7 +31,7 @@ try {
       ],
       TemplateURL: templateS3Uri,
       UsePreviousTemplate: false,
-      PARAMETERS: parameters
+      PARAMETERS: JSON.parse(parameters)
     };
     cf.updateStack(params, function(err, data) {
       if (err){
